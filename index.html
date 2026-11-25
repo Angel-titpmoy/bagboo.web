@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e5">
+  <meta name="description" content="Conoce BAGBOO: caja de 20 bolsas plegables reutilizables con propuesta de fibra de bambú. $160 MXN por caja. Sonríe más sin plásticos.">
+  <meta property="og:title" content="BAGBOO | Sonríe más sin plásticos">
+  <meta property="og:description" content="Caja de 20 bolsas plegables reutilizables. $160 MXN por caja, $8 por bolsa.">
+  <meta property="og:type" content="website">
+  <title>BAGBOO | Caja de 20 bolsas · $160 MXN</title>
+  <link rel="icon" href="assets/bagboo-logo-highres.webp" type="image/webp">
+  <style>
+    :root{
+      --cream:#f4f0e5; --paper:#fbfaf6; --sand:#e6dcc7; --green:#315d45; --green2:#527a58;
+      --deep:#183e2e; --yellow:#f4c940; --ink:#242820; --muted:#70766b; --line:rgba(49,93,69,.15);
+      --shadow:0 20px 60px rgba(41,62,43,.12); --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea{font:inherit}
+    button{cursor:pointer}
+    img{display:block;max-width:100%}
+    .announcement{background:var(--deep);color:#f8f4e8;text-align:center;padding:9px 18px;font-size:.76rem;letter-spacing:.11em;text-transform:uppercase}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(251,250,246,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-wrap{max-width:1240px;margin:auto;padding:12px 26px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:10px;min-width:190px}
+    .brand img{width:62px;height:62px;object-fit:contain;border-radius:50%;mix-blend-mode:multiply}
+    .brand-name{font-weight:950;letter-spacing:-.06em;font-size:1.45rem;line-height:1;color:var(--deep)}
+    .brand-tag{display:block;color:var(--muted);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:27px;font-size:.9rem;font-weight:650;color:#475548}
+    .nav-links a{transition:color .2s}
+    .nav-links a:hover{color:var(--green2)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .cart-btn,.menu-btn{border:1px solid var(--line);background:#fff;border-radius:100px;padding:11px 15px;color:var(--deep);font-weight:750;display:flex;align-items:center;gap:8px}
+    .cart-count{background:var(--yellow);color:var(--deep);width:21px;height:21px;border-radius:50%;display:grid;place-items:center;font-size:.72rem}
+    .menu-btn{display:none}
+    .btn{border:0;border-radius:100px;padding:14px 21px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:transform .2s,box-shadow .2s,background .2s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(37,74,49,.15)}
+    .btn-primary{background:var(--green);color:white}
+    .btn-yellow{background:var(--yellow);color:var(--deep)}
+    .btn-outline{border:1px solid var(--green);color:var(--green);background:transparent}
+    .btn-small{padding:10px 15px;font-size:.85rem}
+    .hero{background:var(--cream);overflow:hidden;position:relative}
+    .hero:before{content:"";position:absolute;width:470px;height:470px;border-radius:50%;background:rgba(244,201,64,.18);right:-100px;top:-170px}
+    .hero-inner{position:relative;max-width:1240px;margin:auto;padding:76px 26px 84px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:60px;min-height:620px}
+    .eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green2);font-weight:850;display:flex;align-items:center;gap:10px}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--yellow)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(3.4rem,6.1vw,6.4rem);line-height:.98;letter-spacing:-.065em;color:var(--deep);margin:22px 0}
+    h1 em{font-weight:400;color:var(--green2)}
+    .hero-copy{max-width:540px;color:#5b6258;font-size:1.08rem}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin:29px 0 34px}
+    .hero-points{display:flex;gap:25px;flex-wrap:wrap;color:#5f685c;font-size:.82rem}
+    .hero-points span{display:flex;align-items:center;gap:7px}
+    .dot{width:8px;height:8px;background:var(--yellow);border-radius:50%;display:inline-block}
+    .hero-art{position:relative;min-height:440px;display:grid;place-items:center}
+    .hero-circle{position:absolute;width:min(450px,90%);aspect-ratio:1;border-radius:50%;background:#e4d8bf}
+    .hero-product{position:relative;width:84%;max-width:520px;filter:drop-shadow(0 25px 24px rgba(42,53,38,.19));transform:rotate(-4deg)}
+    .hero-sticker{position:absolute;right:0;bottom:35px;background:var(--yellow);color:var(--deep);width:112px;height:112px;border-radius:50%;display:grid;place-items:center;text-align:center;font-weight:950;font-size:.77rem;line-height:1.1;transform:rotate(10deg);box-shadow:var(--shadow)}
+    .trust-strip{max-width:1240px;margin:-1px auto 0;padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;border-bottom:1px solid var(--line)}
+    .trust-item{display:flex;gap:13px;align-items:center;justify-content:center;color:#53604f;font-size:.88rem}
+    .trust-icon{width:38px;height:38px;border-radius:50%;background:var(--cream);display:grid;place-items:center;color:var(--green);font-size:1.1rem}
+    section{padding:92px 26px}
+    .section-inner{max-width:1160px;margin:auto}
+    .section-heading{text-align:center;max-width:700px;margin:0 auto 48px}
+    .section-heading h2{font:500 clamp(2.4rem,4.4vw,4.2rem)/1.04 Georgia,serif;letter-spacing:-.05em;color:var(--deep);margin:16px 0}
+    .section-heading p{color:var(--muted);font-size:1rem}
+    .product-section{background:#fff}
+    .product-layout{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+    .product-visual{position:relative;background:var(--cream);border-radius:32px;min-height:500px;display:grid;place-items:center;overflow:hidden;padding:35px}
+    .product-visual:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(244,201,64,.32)}
+    .product-visual img{position:relative;max-height:390px;width:100%;object-fit:contain;mix-blend-mode:multiply}
+    .product-thumbs{position:relative;display:flex;justify-content:center;gap:12px;margin-top:12px}
+    .product-thumb{width:78px;height:70px;border:1px solid rgba(49,93,69,.2);border-radius:13px;background:#fff;padding:5px;overflow:hidden;transition:border-color .2s,transform .2s}
+    .product-thumb:hover{transform:translateY(-2px)}
+    .product-thumb.active{border:2px solid var(--green);box-shadow:0 0 0 3px rgba(49,93,69,.08)}
+    .product-thumb img{width:100%;height:100%;max-height:none;object-fit:cover;border-radius:8px;mix-blend-mode:normal}
+    .gallery-caption{position:relative;font-size:.72rem;color:var(--muted);text-align:center;margin:0}
+    .product-content h2{font:500 clamp(2.5rem,4vw,3.8rem)/1.02 Georgia,serif;letter-spacing:-.05em;color:var(--deep);margin:15px 0}
+    .product-content>p{color:var(--muted)}
+    .price-row{display:flex;align-items:baseline;gap:9px;margin:24px 0}
+    .price{font-size:2.3rem;font-weight:900;letter-spacing:-.06em;color:var(--deep)}
+    .price-note{color:var(--muted);font-size:.85rem}
+    .specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:25px 0}
+    .spec{padding:13px 15px;border:1px solid var(--line);border-radius:15px;background:#fff}
+    .spec strong{display:block;color:var(--deep);font-size:.9rem}
+    .spec span{font-size:.78rem;color:var(--muted)}
+    .qty-row{display:flex;align-items:center;gap:13px;margin:20px 0}
+    .qty-control{display:flex;align-items:center;border:1px solid var(--line);border-radius:100px;overflow:hidden}
+    .qty-control button{border:0;background:#f7f5ef;width:39px;height:42px;color:var(--deep);font-size:1.2rem}
+    .qty-control input{border:0;width:38px;text-align:center;background:transparent;font-weight:800;color:var(--deep)}
+    .fine-print{font-size:.75rem;color:#858a7e;line-height:1.45;margin-top:15px}
+    .about-section{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+    .about-card{background:var(--paper);border-radius:30px;padding:26px;box-shadow:var(--shadow);transform:rotate(-2deg)}
+    .about-card img{width:100%;border-radius:18px;mix-blend-mode:multiply}
+    .about-copy h2{font:500 clamp(2.4rem,4vw,3.8rem)/1.03 Georgia,serif;color:var(--deep);letter-spacing:-.05em;margin:16px 0}
+    .about-copy p{color:#62695e}
+    .values{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+    .value{padding:15px;border-left:3px solid var(--yellow);background:rgba(255,255,255,.56);border-radius:0 13px 13px 0}
+    .value strong{display:block;font-size:.88rem;color:var(--deep);margin-bottom:3px}
+    .value span{font-size:.78rem;color:var(--muted)}
+    .difference-section{background:var(--deep);color:#f9f7ef}
+    .difference-section .section-heading h2{color:#fff}
+    .difference-section .section-heading p{color:rgba(255,255,255,.65)}
+    .difference-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .difference-card{padding:27px;border:1px solid rgba(255,255,255,.16);border-radius:23px;background:rgba(255,255,255,.06)}
+    .difference-card .num{color:var(--yellow);font:italic 2rem Georgia,serif}
+    .difference-card h3{font-size:1.1rem;margin:14px 0 9px}
+    .difference-card p{color:rgba(255,255,255,.7);font-size:.89rem;margin:0}
+    .community-section{background:#fff}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .blog-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;transition:transform .2s,box-shadow .2s}
+    .blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .blog-visual{height:190px;background:var(--cream);display:grid;place-items:center;position:relative;overflow:hidden}
+    .blog-visual img{height:100%;width:100%;object-fit:contain;padding:9px;background:var(--cream)}
+    .blog-body{padding:21px}
+    .blog-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--green2);font-weight:850}
+    .blog-body h3{color:var(--deep);font:500 1.35rem/1.13 Georgia,serif;margin:10px 0}
+    .blog-body p{color:var(--muted);font-size:.85rem}
+    .text-link{color:var(--green);font-weight:850;font-size:.85rem;border:0;background:transparent;padding:0}
+    .cta-band{margin-top:52px;background:var(--cream);padding:35px;border-radius:28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta-band h3{font:500 2rem Georgia,serif;color:var(--deep);margin:0 0 5px}
+    .cta-band p{color:var(--muted);margin:0}
+    .contact-section{background:#f5f2e9}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+    .contact-copy h2{font:500 clamp(2.5rem,4vw,3.8rem)/1.02 Georgia,serif;color:var(--deep);letter-spacing:-.05em;margin:15px 0}
+    .contact-copy p{color:var(--muted)}
+    .contact-detail{display:flex;align-items:center;gap:13px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--deep);font-weight:650}
+    .contact-detail span:first-child{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center}
+    .contact-form{background:#fff;border-radius:25px;padding:30px;box-shadow:var(--shadow)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{font-size:.78rem;color:#586255;font-weight:800;display:block;margin-bottom:7px}
+    input,textarea{width:100%;border:1px solid var(--line);background:#fcfbf8;padding:13px 14px;border-radius:12px;color:var(--ink);outline:none}
+    input:focus,textarea:focus{border-color:var(--green2);box-shadow:0 0 0 3px rgba(82,122,88,.1)}
+    .field{margin-bottom:15px}
+    textarea{min-height:120px;resize:vertical}
+    .form-note{font-size:.74rem;color:#858a7e;margin:12px 0 0}
+    .footer{background:#183e2e;color:#f7f4ea;padding:52px 26px 25px}
+    .footer-inner{max-width:1160px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px}
+    .footer-brand{display:flex;align-items:center;gap:14px}
+    .footer-brand img{width:75px;height:75px;object-fit:contain;background:#fff;border-radius:50%}
+    .footer-brand strong{font-size:1.7rem;letter-spacing:-.06em}
+    .footer p,.footer a{color:rgba(255,255,255,.72);font-size:.86rem}
+    .footer h4{margin:0 0 15px;color:var(--yellow);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}
+    .footer-links{display:grid;gap:9px}
+    .footer-bottom{max-width:1160px;margin:36px auto 0;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;display:flex;justify-content:space-between;gap:16px;color:rgba(255,255,255,.55);font-size:.72rem}
+    .disclaimer{max-width:1160px;margin:16px auto 0;color:rgba(255,255,255,.48);font-size:.68rem;line-height:1.45}
+    .cart-overlay{position:fixed;inset:0;background:rgba(12,25,17,.42);z-index:40;opacity:0;visibility:hidden;transition:.25s}
+    .cart-overlay.open{opacity:1;visibility:visible}
+    .cart-panel{position:fixed;right:0;top:0;height:100%;width:min(440px,100%);background:var(--paper);z-index:41;transform:translateX(105%);transition:transform .3s ease;display:flex;flex-direction:column;box-shadow:-15px 0 50px rgba(0,0,0,.14)}
+    .cart-panel.open{transform:translateX(0)}
+    .cart-head{padding:23px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+    .cart-head h3{margin:0;color:var(--deep);font:500 1.7rem Georgia,serif}
+    .icon-btn{border:0;background:var(--cream);width:39px;height:39px;border-radius:50%;font-size:1.3rem;color:var(--deep)}
+    .cart-items{padding:18px 23px;overflow:auto;flex:1}
+    .cart-empty{text-align:center;color:var(--muted);padding:65px 10px}
+    .cart-item{display:grid;grid-template-columns:70px 1fr auto;gap:13px;padding:13px 0;border-bottom:1px solid var(--line);align-items:center}
+    .cart-item img{width:70px;height:70px;object-fit:cover;border-radius:13px;background:var(--cream)}
+    .cart-item strong{display:block;color:var(--deep);font-size:.9rem}
+    .cart-item small{color:var(--muted)}
+    .cart-item button{border:0;background:transparent;color:#a34d3c;font-size:.75rem;text-decoration:underline;padding:6px 0}
+    .cart-foot{border-top:1px solid var(--line);padding:20px 23px 25px}
+    .total-row{display:flex;justify-content:space-between;font-weight:900;color:var(--deep);font-size:1.1rem;margin-bottom:16px}
+    .cart-foot .btn{width:100%;margin-top:8px}
+    .modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(15,30,20,.5);z-index:60;padding:20px;opacity:0;visibility:hidden;transition:.2s}
+    .modal.open{opacity:1;visibility:visible}
+    .modal-card{background:var(--paper);max-width:560px;width:100%;padding:33px;border-radius:25px;position:relative;box-shadow:var(--shadow)}
+    .modal-card h3{font:500 2rem Georgia,serif;color:var(--deep);margin:0 30px 12px 0}
+    .modal-card p{color:var(--muted)}
+    .modal-close{position:absolute;right:18px;top:18px}
+    .toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);opacity:0;visibility:hidden;z-index:80;background:var(--deep);color:white;padding:12px 18px;border-radius:100px;font-size:.85rem;box-shadow:var(--shadow);transition:.25s}
+    .toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+    .legal-note{font-size:.73rem;color:#858a7e}
+
+    .mission-vision{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:22px 0}
+    .mission-vision article{padding:17px 18px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid var(--line)}
+    .mission-vision strong{display:block;color:var(--deep);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .mission-vision p{margin:0;color:#62695e;font-size:.86rem}
+    .warranty-note{display:flex;gap:13px;align-items:center;margin:20px 0 10px;padding:15px 17px;border-radius:16px;background:#f3f0e2;border:1px solid rgba(49,93,69,.14)}
+    .warranty-note .warranty-icon{width:42px;height:42px;flex:0 0 42px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--deep);font-size:1.25rem}
+    .warranty-note strong{display:block;color:var(--deep);font-size:.9rem}
+    .warranty-note span{display:block;color:var(--muted);font-size:.78rem}
+    .purchase-section{background:#f5f2e9}
+    .purchase-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .purchase-card{background:#fff;border:1px solid var(--line);border-radius:23px;padding:28px;box-shadow:0 12px 35px rgba(41,62,43,.06)}
+    .purchase-card .purchase-kicker{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--green2);font-weight:850}
+    .purchase-card h3{font:500 1.8rem/1.1 Georgia,serif;color:var(--deep);margin:10px 0}
+    .purchase-card p,.purchase-card li{color:var(--muted);font-size:.9rem}
+    .purchase-card ul{padding-left:18px;margin:13px 0 21px}
+    .purchase-card .mini-price{font-size:1.4rem;font-weight:900;color:var(--deep)}
+    .contact-detail small{display:block;font-weight:450;color:var(--muted);font-size:.76rem}
+    .contact-detail.address{align-items:flex-start}
+    .contact-detail.address span:first-child{flex:0 0 38px}
+    .contact-hours{margin-top:15px;padding:15px 17px;background:#fff;border-radius:15px;color:var(--muted);font-size:.84rem}
+    .contact-hours strong{color:var(--deep)}
+    .social-note{margin-top:14px;padding:15px 17px;border-radius:15px;background:rgba(244,201,64,.14);color:#596252;font-size:.85rem}
+    @media(max-width:760px){.mission-vision,.purchase-grid{grid-template-columns:1fr}.purchase-card{padding:23px}}
+    @media(max-width:920px){.nav-links{gap:16px}.hero-inner{gap:20px}.product-layout,.about-grid,.contact-grid{gap:35px}.footer-inner{gap:25px}}
+    @media(max-width:760px){
+      .nav-wrap{padding:8px 16px}.brand{min-width:0}.brand img{width:52px;height:52px}.brand-name{font-size:1.25rem}.brand-tag{font-size:.54rem}
+      .menu-btn{display:flex}.nav-links{display:none;position:absolute;top:75px;left:12px;right:12px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:12px 8px;border-bottom:1px solid var(--line)}.nav-links a:last-child{border:0}.cart-btn{padding:10px 12px}
+      .hero-inner{grid-template-columns:1fr;padding:56px 20px 48px;gap:25px}.hero-art{min-height:310px;order:-1}.hero-product{max-width:350px;width:80%}.hero-circle{width:290px}.hero-sticker{width:85px;height:85px;font-size:.65rem;right:7%;bottom:12px}h1{font-size:3.8rem;margin:18px 0}.hero-copy{font-size:.98rem}
+      .trust-strip{grid-template-columns:1fr;padding:15px 20px;gap:12px}.trust-item{justify-content:flex-start}
+      section{padding:68px 20px}.section-heading{margin-bottom:33px}.product-layout,.about-grid,.contact-grid{grid-template-columns:1fr}.product-visual{min-height:360px}.product-visual img{max-height:270px}.product-thumb{width:68px;height:62px}.product-content h2{font-size:2.7rem}.about-grid{gap:35px}.about-card{max-width:430px;margin:auto}.difference-grid,.blog-grid{grid-template-columns:1fr}.difference-card{padding:23px}.blog-visual{height:210px}.cta-band{align-items:flex-start;flex-direction:column;padding:27px}.footer-inner{grid-template-columns:1fr 1fr}.footer-inner>div:first-child{grid-column:1/-1}.footer-bottom{flex-direction:column}
+    }
+    @media(max-width:420px){.form-row,.specs,.values{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.footer-inner>div:first-child{grid-column:auto}.hero-ctas .btn{width:100%}.nav-actions{gap:6px}.menu-btn{padding:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <div class="announcement">Caja de 20 bolsas · $160 MXN · Pequeñas acciones, grandes cambios</div>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#inicio" aria-label="BAGBOO, ir al inicio">
+        <img src="assets/bagboo-logo-highres.webp" alt="Logotipo BAGBOO">
+        <span><span class="brand-name">bagboo</span><span class="brand-tag">Sonríe más sin plásticos</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#producto">Producto</a><a href="#nosotros">Nosotros</a><a href="#diferencia">Nuestra idea</a><a href="#compra">Cómo comprar</a><a href="#comunidad">Comunidad</a><a href="#contacto">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCart" type="button" aria-label="Abrir carrito">Carrito <span class="cart-count" id="cartCount">0</span></button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Una forma más alegre de comprar</div>
+          <h1>Tus compras,<br><em>con otra</em><br>sonrisa.</h1>
+          <p class="hero-copy">Conoce BAGBOO: una caja con 20 bolsas plegables y reutilizables, elaboradas con tela no tejida tipo spunlace cuya composición de bambú declara el proveedor. Una alternativa práctica para tus compras cotidianas, con una identidad que no pasa desapercibida.</p>
+          <div class="hero-ctas"><a class="btn btn-primary" href="#producto">Conocer el producto <span>↗</span></a><a class="btn btn-outline" href="#nosotros">Nuestra historia</a></div>
+          <div class="hero-points"><span><i class="dot"></i> Caja con 20 bolsas</span><span><i class="dot"></i> Diseño plegable</span><span><i class="dot"></i> Hechas para reutilizar</span></div>
+        </div>
+        <div class="hero-art" aria-label="Presentación visual del empaque BAGBOO">
+          <div class="hero-circle"></div>
+          <img class="hero-product" src="assets/bagboo-box-photo.webp" alt="Fotografía de la propuesta de empaque exterior de BAGBOO">
+          <div class="hero-sticker">PEQUEÑAS<br>ACCIONES<br>♡ GRANDES<br>CAMBIOS</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="Características principales">
+      <div class="trust-item"><span class="trust-icon">⌁</span><span><strong>Prácticas</strong><br>Para tus compras cotidianas</span></div>
+      <div class="trust-item"><span class="trust-icon">☺</span><span><strong>Con personalidad</strong><br>Diseño alegre y reconocible</span></div>
+      <div class="trust-item"><span class="trust-icon">♻</span><span><strong>Con enfoque responsable</strong><br>Una alternativa para reutilizar</span></div>
+    </div>
+
+    <section class="product-section" id="producto">
+      <div class="section-inner product-layout">
+        <div class="product-visual">
+          <img id="productMainImage" src="assets/bagboo-bag-design.webp" alt="Diseño frontal de la bolsa BAGBOO con carita sonriente">
+          <div class="product-thumbs" aria-label="Galería de imágenes del producto">
+            <button class="product-thumb active" type="button" data-image="assets/bagboo-bag-design.webp" data-alt="Diseño frontal de la bolsa BAGBOO con carita sonriente" aria-label="Ver diseño de la bolsa"><img src="assets/bagboo-bag-design.webp" alt=""></button>
+            <button class="product-thumb" type="button" data-image="assets/bagboo-box-photo.webp" data-alt="Propuesta de empaque exterior de BAGBOO" aria-label="Ver empaque exterior"><img src="assets/bagboo-box-photo.webp" alt=""></button>
+            <button class="product-thumb" type="button" data-image="assets/bagboo-open-box.webp" data-alt="Vista del interior del empaque de BAGBOO" aria-label="Ver interior del empaque"><img src="assets/bagboo-open-box.webp" alt=""></button>
+          </div>
+          <p class="gallery-caption">Imágenes de referencia del diseño y la presentación desarrollados para el proyecto.</p>
+        </div>
+        <div class="product-content">
+          <div class="eyebrow">El producto</div>
+          <h2>Una caja.<br>Veinte sonrisas.</h2>
+          <p>BAGBOO se presenta en una caja con 20 bolsas plegables y reutilizables. El material de referencia es tela no tejida tipo spunlace, declarada por el proveedor como 100% fibra de bambú. La propuesta busca ofrecer una bolsa compacta, fácil de guardar y práctica para acompañar las compras cotidianas.</p>
+          <div class="price-row"><span class="price">$160 MXN</span><span class="price-note">por caja de 20 bolsas · $8 por bolsa</span></div>
+          <div class="specs">
+            <div class="spec"><strong>20 piezas</strong><span>Por caja</span></div>
+            <div class="spec"><strong>29 × 28 cm</strong><span>Dimensiones objetivo</span></div>
+            <div class="spec"><strong>Spunlace · 180 g/m²</strong><span>Gramaje objetivo del material</span></div>
+            <div class="spec"><strong>1.6 kg</strong><span>Capacidad objetivo por bolsa*</span></div>
+          </div>
+          <div class="qty-row">
+            <div class="qty-control" aria-label="Cantidad de cajas"><button type="button" id="qtyMinus" aria-label="Restar">−</button><input type="number" id="qtyInput" min="1" max="99" value="1" aria-label="Cantidad"><button type="button" id="qtyPlus" aria-label="Sumar">+</button></div>
+            <button class="btn btn-primary" id="addToCart" type="button">Agregar una caja · $160 <span>＋</span></button>
+          </div>
+          <div class="warranty-note"><span class="warranty-icon">✓</span><div><strong>Garantía propuesta de 1 año</strong><span>Cubre defectos de fabricación y materiales, de acuerdo con las condiciones de la póliza del proyecto.</span></div></div>
+          <p class="fine-print">*Las medidas objetivo son aproximadamente 29 × 28 cm; el material de referencia es spunlace de 180 g/m², en rollo de 2.0 m de ancho. La capacidad de 1.6 kg por bolsa, la composición y las propiedades de biodegradabilidad o compostabilidad deben confirmarse mediante pruebas y documentación técnica antes de presentarse como certificadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="nosotros">
+      <div class="section-inner about-grid">
+        <div class="about-card"><img src="assets/bagboo-open-box.webp" alt="Vista del interior de la caja de presentación propuesta para BAGBOO"></div>
+        <div class="about-copy">
+          <div class="eyebrow">Quiénes somos</div>
+          <h2>Una sonrisa también puede ser un pequeño cambio.</h2>
+          <p>BAGBOO nace como una propuesta para hacer más práctica la reutilización de bolsas al salir de compras. Queremos que llevar una bolsa propia sea algo sencillo, cómodo y que además tenga un diseño que la gente disfrute usar.</p>
+          <p>Nos interesa conectar con personas y comercios que buscan alternativas para reducir el uso de bolsas desechables. Además del producto, queremos compartir información, ideas y proyectos que impulsen hábitos de consumo más responsables.</p>
+          <div class="mission-vision">
+            <article><strong>Nuestra misión</strong><p>Transformar las compras diarias en un impacto positivo mediante bolsas funcionales y atractivas que impulsen hábitos de consumo responsable sin sacrificar la practicidad.</p></article>
+            <article><strong>Hacia 2035</strong><p>Ser una marca reconocida en México por ofrecer bolsas de fibra de bambú reutilizables, con presencia en supermercados y tiendas y una operación que crezca de forma responsable.</p></article>
+          </div>
+          <div class="values">
+            <div class="value"><strong>Innovación</strong><span>Buscar mejores materiales, diseños y procesos.</span></div>
+            <div class="value"><strong>Compromiso ambiental</strong><span>Considerar el impacto en las decisiones de la empresa.</span></div>
+            <div class="value"><strong>Creatividad</strong><span>Unir diseño, identidad y practicidad.</span></div>
+            <div class="value"><strong>Integridad y honestidad</strong><span>Comunicar características y límites con claridad.</span></div>
+            <div class="value"><strong>Responsabilidad social</strong><span>Promover hábitos de consumo responsable.</span></div>
+            <div class="value"><strong>Calidad y servicio</strong><span>Atender al cliente y mejorar continuamente.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="difference-section" id="diferencia">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow" style="justify-content:center;color:#e8dba8">Lo que nos mueve</div>
+          <h2>Más que llevar tus compras.</h2>
+          <p>Queremos que la alternativa reutilizable también sea agradable, fácil de integrar a tu rutina y transparente con sus características.</p>
+        </div>
+        <div class="difference-grid">
+          <article class="difference-card"><div class="num">01</div><h3>Practicidad diaria</h3><p>El formato plegable está pensado para guardarse y llevarse contigo, para que tener una bolsa a la mano sea más sencillo.</p></article>
+          <article class="difference-card"><div class="num">02</div><h3>Una marca cercana</h3><p>La carita sonriente, los tonos cálidos y el empaque de BAGBOO buscan hacer que el producto se sienta amable y fácil de reconocer.</p></article>
+          <article class="difference-card"><div class="num">03</div><h3>Consumo consciente</h3><p>Promovemos la reutilización y la reducción de bolsas desechables, sin esconder las pruebas y cuidados que el material necesita.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="purchase-section" id="compra">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow" style="justify-content:center">Dónde y cómo conseguir BAGBOO</div>
+          <h2>Una caja para tu día a día o para tu negocio.</h2>
+          <p>El proyecto contempla una distribución local en Guadalajara, con atención a consumidores y comercios.</p>
+        </div>
+        <div class="purchase-grid">
+          <article class="purchase-card">
+            <div class="purchase-kicker">B2C · Consumidor final</div>
+            <h3>Para tus compras cotidianas</h3>
+            <p>Solicita tu caja por nuestros canales digitales. La propuesta contempla atención por redes sociales y entregas locales en Guadalajara y zonas cercanas.</p>
+            <ul><li>Presentación de 20 bolsas plegables.</li><li>Precio de referencia: $160 MXN por caja.</li><li>Atención para dudas y pedidos por WhatsApp.</li></ul>
+            <a class="btn btn-primary" href="#producto">Ver producto ↗</a>
+          </article>
+          <article class="purchase-card">
+            <div class="purchase-kicker">B2B · Comercios y distribuidores</div>
+            <h3>Para tiendas y negocios</h3>
+            <p>BAGBOO también contempla ventas a fruterías, tiendas, comercios de proximidad y distribuidores interesados en incorporar una alternativa reutilizable a su oferta.</p>
+            <ul><li>Cajas de 20 unidades.</li><li>Pedidos y cotizaciones para mayoreo.</li><li>Seguimiento directo con el equipo de ventas.</li></ul>
+            <a class="btn btn-outline" href="#contacto">Solicitar cotización ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section" id="comunidad">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow" style="justify-content:center">Ideas que se comparten</div>
+          <h2>La comunidad también hace el cambio.</h2>
+          <p>Queremos usar este espacio para compartir consejos, responder preguntas y dar visibilidad a iniciativas que buscan reducir residuos.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-visual"><img src="assets/bagboo-product-label.webp" alt="Propuesta de etiqueta e información del producto BAGBOO" loading="lazy"></div>
+            <div class="blog-body"><div class="blog-tag">Información del producto</div><h3>Una etiqueta para conocer mejor la bolsa</h3><p>La propuesta de etiqueta reúne materiales, dimensiones, cuidados y recomendaciones de uso.</p><button class="text-link read-more" data-title="Etiqueta e información" data-text="La etiqueta del proyecto busca reunir información sobre materiales, dimensiones, capacidad objetivo, recomendaciones de uso y cuidados. Las especificaciones técnicas deberán confirmarse con las pruebas del producto final.">Ver detalle ↗</button></div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-visual"><img src="assets/bagboo-community-brochure.webp" alt="Material informativo y propuesta de comunicación de BAGBOO" loading="lazy"></div>
+            <div class="blog-body"><div class="blog-tag">Comunidad</div><h3>Pequeñas acciones, grandes cambios</h3><p>La comunicación de BAGBOO busca compartir ideas, información y proyectos relacionados con hábitos de consumo responsable.</p><button class="text-link read-more" data-title="Comunidad BAGBOO" data-text="La campaña propone conectar con los usuarios mediante publicaciones y videos en Instagram y TikTok, compartir información sobre la marca y dar visibilidad a proyectos que buscan reducir residuos.">Ver detalle ↗</button></div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-visual"><img src="assets/bagboo-warranty-card.webp" alt="Diseño de la póliza de garantía propuesta para BAGBOO" loading="lazy"></div>
+            <div class="blog-body"><div class="blog-tag">Atención al cliente</div><h3>Una garantía clara y sencilla</h3><p>El proyecto contempla una garantía de un año ante defectos de fabricación y materiales, sujeta a las condiciones de la póliza.</p><button class="text-link read-more" data-title="Garantía BAGBOO" data-text="La póliza propuesta contempla una vigencia de un año para defectos atribuibles a la fabricación o a los materiales, siempre que el producto se utilice, almacene y conserve bajo las condiciones indicadas. La póliza del proyecto también especifica exclusiones y medios de contacto.">Ver detalle ↗</button></div>
+          </article>
+        </div>
+        <div class="cta-band"><div><h3>¿Tienes una idea para compartir?</h3><p>Nos interesa conocer proyectos, iniciativas y opiniones de nuestra comunidad.</p></div><a class="btn btn-primary" href="#contacto">Platiquemos ↗</a></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="section-inner contact-grid">
+        <div class="contact-copy">
+          <div class="eyebrow">Estamos para leerte</div>
+          <h2>Hablemos de cosas buenas.</h2>
+          <p>¿Tienes dudas del producto, buscas una cotización para tu negocio o quieres compartir una iniciativa? Escríbenos.</p>
+          <div class="contact-detail"><span>✉</span><a href="mailto:atencion@bagboo.com">atencion@bagboo.com</a></div>
+          <div class="contact-detail"><span>☏</span><a href="tel:+523334413950">33 3441 3950</a></div>
+          <div class="contact-detail address"><span>⌖</span><div>Av. La Paz 2285, Col. Americana<br>44160 Guadalajara, Jalisco</div></div>
+          <div class="contact-hours"><strong>Horario de atención</strong><br>Lunes a viernes · 7:00 a 21:00 h</div>
+          <div class="social-note">También contemplamos atender a nuestra comunidad mediante Instagram y TikTok, con publicaciones, videos y contenido sobre el producto y los proyectos que compartan nuestros valores.</div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="field"><label for="name">Tu nombre</label><input id="name" name="name" required placeholder="¿Cómo te llamas?"></div>
+            <div class="field"><label for="email">Tu correo</label><input id="email" name="email" type="email" required placeholder="nombre@correo.com"></div>
+          </div>
+          <div class="field"><label for="topic">¿Qué te interesa?</label><select id="topic" name="topic" style="width:100%;border:1px solid var(--line);background:#fcfbf8;padding:13px 14px;border-radius:12px;color:var(--ink)"><option>Información del producto</option><option>Cotización para negocio</option><option>Colaboraciones</option><option>Otra consulta</option></select></div>
+          <div class="field"><label for="message">Mensaje</label><textarea id="message" name="message" required placeholder="Cuéntanos qué tienes en mente..."></textarea></div>
+          <button class="btn btn-primary" type="submit">Preparar mensaje ↗</button>
+          <p class="form-note">Al enviar, se abrirá tu aplicación de correo con el mensaje preparado. Este sitio no almacena tus datos.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand"><img src="assets/bagboo-logo-highres.webp" alt="Logotipo BAGBOO"><div><strong>bagboo</strong><br><span style="color:var(--yellow);font-size:.73rem;letter-spacing:.12em;text-transform:uppercase">Sonríe más sin plásticos</span></div></div>
+        <p style="max-width:390px;margin-top:18px">Una propuesta de bolsas plegables reutilizables para acompañar tus compras cotidianas. Pequeñas acciones, grandes cambios.</p>
+      </div>
+      <div><h4>Explora</h4><div class="footer-links"><a href="#producto">Producto y galería</a><a href="#nosotros">Nosotros</a><a href="#diferencia">Nuestra idea</a><a href="#compra">Cómo comprar</a><a href="#comunidad">Comunidad</a></div></div>
+      <div><h4>Contacto</h4><div class="footer-links"><a href="mailto:atencion@bagboo.com">atencion@bagboo.com</a><a href="tel:+523334413950">33 3441 3950</a><a href="#contacto">Escríbenos</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> BAGBOO. Todos los derechos reservados.</span><span>Hecho con una sonrisa ♡</span></div>
+    <p class="disclaimer">BAGBOO es un proyecto académico de lanzamiento. La composición de la tela se presenta conforme a la declaración del proveedor; la capacidad, el gramaje y las propiedades de biodegradabilidad o compostabilidad requieren validación mediante muestras, pruebas y documentación técnica. El carrito prepara una solicitud de pedido por WhatsApp; no procesa pagos ni confirma compras.</p>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-head"><h3>Tu carrito</h3><button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="cart-empty">Tu carrito está esperando una sonrisa ☺</div></div>
+    <div class="cart-foot"><div class="total-row"><span>Total</span><span id="cartTotal">$0 MXN</span></div><button class="btn btn-primary" id="checkoutBtn" type="button">Solicitar pedido por WhatsApp ↗</button><p class="fine-print">Solicitud de demostración. No se realiza ningún cobro en esta página.</p></div>
+  </aside>
+
+  <div class="modal" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><button class="icon-btn modal-close" id="modalClose" aria-label="Cerrar">×</button><div class="eyebrow">Comunidad BAGBOO</div><h3 id="modalTitle"></h3><p id="modalText"></p><button class="btn btn-outline btn-small" id="modalDone">Cerrar</button></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Datos editables de la tienda. Confirmar los datos de contacto antes de publicar.
+    const BAGBOO = {
+      productName: 'Caja BAGBOO · 20 bolsas',
+      price: 160,
+      whatsapp: '523334413950',
+      email: 'atencion@bagboo.com'
+    };
+    const $ = (selector) => document.querySelector(selector);
+    let cart = [];
+    try {
+      const savedCart = JSON.parse(localStorage.getItem('bagboo-cart') || '[]');
+      cart = Array.isArray(savedCart) ? savedCart : [];
+    } catch { cart = []; }
+    // Actualiza los precios guardados en navegadores que visitaron una versión anterior.
+    cart = cart
+      .filter(item => item && item.id === 'bagboo-box')
+      .map(item => ({
+        id: 'bagboo-box',
+        name: BAGBOO.productName,
+        price: BAGBOO.price,
+        quantity: Math.max(1, Math.min(99, Number(item.quantity) || 1)),
+        image: 'assets/bagboo-box-photo.webp'
+      }));
+    const currency = (value) => new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(value);
+    function saveCart(){ localStorage.setItem('bagboo-cart',JSON.stringify(cart)); renderCart(); }
+    function notify(message){ const t=$('#toast'); t.textContent=message; t.classList.add('show'); clearTimeout(window.toastTimer); window.toastTimer=setTimeout(()=>t.classList.remove('show'),2600); }
+    function addToCart(quantity){
+      const q=Math.max(1,Math.min(99,Number(quantity)||1));
+      const item=cart.find(x=>x.id==='bagboo-box');
+      if(item) item.quantity=Math.min(99,item.quantity+q); else cart.push({id:'bagboo-box',name:BAGBOO.productName,price:BAGBOO.price,quantity:q,image:'assets/bagboo-box-photo.webp'});
+      saveCart(); notify(`${q} caja${q>1?'s':''} agregada${q>1?'s':''} al carrito`);
+    }
+    function renderCart(){
+      const count=cart.reduce((sum,item)=>sum+item.quantity,0);
+      $('#cartCount').textContent=count;
+      $('#cartTotal').textContent=currency(cart.reduce((sum,item)=>sum+item.price*item.quantity,0));
+      const wrap=$('#cartItems');
+      if(!cart.length){wrap.innerHTML='<div class="cart-empty">Tu carrito está esperando una sonrisa ☺</div>';return;}
+      wrap.innerHTML=cart.map(item=>`<div class="cart-item"><img src="${item.image}" alt=""><div><strong>${item.name}</strong><small>${item.quantity} × ${currency(item.price)}</small><br><button type="button" data-remove="${item.id}">Quitar</button></div><strong>${currency(item.price*item.quantity)}</strong></div>`).join('');
+      wrap.querySelectorAll('[data-remove]').forEach(btn=>btn.addEventListener('click',()=>{cart=cart.filter(x=>x.id!==btn.dataset.remove);saveCart();}));
+    }
+    function openCart(){ $('#cartPanel').classList.add('open');$('#cartOverlay').classList.add('open');$('#cartPanel').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'; }
+    function closeCart(){ $('#cartPanel').classList.remove('open');$('#cartOverlay').classList.remove('open');$('#cartPanel').setAttribute('aria-hidden','true');document.body.style.overflow=''; }
+    $('#openCart').addEventListener('click',openCart);$('#closeCart').addEventListener('click',closeCart);$('#cartOverlay').addEventListener('click',closeCart);
+    $('#qtyMinus').addEventListener('click',()=>$('#qtyInput').value=Math.max(1,(Number($('#qtyInput').value)||1)-1));
+    $('#qtyPlus').addEventListener('click',()=>$('#qtyInput').value=Math.min(99,(Number($('#qtyInput').value)||1)+1));
+    $('#qtyInput').addEventListener('change',()=>$('#qtyInput').value=Math.max(1,Math.min(99,Number($('#qtyInput').value)||1)));
+    document.querySelectorAll('.product-thumb').forEach(button=>button.addEventListener('click',()=>{
+      $('#productMainImage').src=button.dataset.image;
+      $('#productMainImage').alt=button.dataset.alt;
+      document.querySelectorAll('.product-thumb').forEach(item=>item.classList.toggle('active',item===button));
+    }));
+    $('#addToCart').addEventListener('click',()=>{addToCart($('#qtyInput').value);openCart();});
+    $('#checkoutBtn').addEventListener('click',()=>{
+      if(!cart.length){notify('Agrega una caja antes de solicitar tu pedido');return;}
+      const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);
+      const lines=cart.map(item=>`• ${item.quantity} × ${item.name} — ${currency(item.price*item.quantity)}`).join('\n');
+      const message=`Hola, BAGBOO. Me gustaría solicitar información sobre este pedido:\n${lines}\nTotal de referencia: ${currency(total)}\n\n¿Me pueden compartir disponibilidad y condiciones de entrega?`;
+      window.open(`https://wa.me/${BAGBOO.whatsapp}?text=${encodeURIComponent(message)}`,'_blank','noopener');
+    });
+    $('#contactForm').addEventListener('submit',(event)=>{
+      event.preventDefault();
+      const data=new FormData(event.currentTarget);
+      const subject=`Consulta BAGBOO: ${data.get('topic')}`;
+      const body=`Nombre: ${data.get('name')}\nCorreo: ${data.get('email')}\nTema: ${data.get('topic')}\n\n${data.get('message')}`;
+      window.location.href=`mailto:${BAGBOO.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+    const modal=$('#articleModal');
+    function closeModal(){modal.classList.remove('open');}
+    document.querySelectorAll('.read-more').forEach(button=>button.addEventListener('click',()=>{$('#modalTitle').textContent=button.dataset.title;$('#modalText').textContent=button.dataset.text;modal.classList.add('open');}));
+    $('#modalClose').addEventListener('click',closeModal);$('#modalDone').addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+    $('#menuBtn').addEventListener('click',()=>{const nav=$('#navLinks');const open=nav.classList.toggle('open');$('#menuBtn').setAttribute('aria-expanded',String(open));});
+    document.querySelectorAll('#navLinks a').forEach(link=>link.addEventListener('click',()=>{$('#navLinks').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');}));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeModal();}});
+    $('#year').textContent=new Date().getFullYear();renderCart();
+  </script>
+</body>
+</html>
